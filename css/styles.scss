@@ -1,0 +1,190 @@
+@function rem($rawDimension) {
+  $rem: $rawDimension / 16;
+  @return $rem * 1rem;
+}
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Left-lower-card-color: #2bb3b1;
+$Right-lower-card-color: #4abebd;
+$Upper-card-color: #ffffff;
+$Gray-text: #67c6c9;
+$Table-color: #baf6f7;
+$Button-color: #bfdf32;
+
+html {
+  box-sizing: border-box;
+  background-color: $Light-Gray;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-size: rem(15);
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-size: rem(17);
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.upper-card {
+  background-color: $Upper-card-color;
+
+  * {
+    margin-left: rem(30);
+    margin-right: rem(30);
+  }
+
+  .header {
+    color: $Left-lower-card-color;
+    margin-top: rem(35);
+  }
+
+  .second-header {
+    color: $Bright-Yellow;
+  }
+
+  p {
+    color: $Grayish-Blue;
+    margin: 0 rem(30) rem(35) rem(30);
+  }
+}
+
+.left-lower-card {
+  background-color: $Left-lower-card-color;
+  color: white;
+
+  * {
+    margin-left: rem(30);
+    margin-right: rem(30);
+  }
+
+  .monthly-subscription {
+    margin: rem(35) rem(30) rem(20);
+  }
+
+  .price {
+    font-size: rem(30);
+    margin: 0 rem(30) 0;
+  }
+
+  .price {
+    display: flex;
+
+    .grey-text {
+      font-size: rem(14);
+      color: $Gray-text;
+      margin-left: rem(15);
+      align-self: center;
+    }
+  }
+
+  .button {
+    color: white;
+    font-family: "Karla", sans-serif;
+    outline: none;
+    border: none;
+    padding: 5%;
+    width: 80%;
+    border-radius: rem(4);
+    background-color: $Button-color;
+    margin: rem(15) rem(30) rem(35);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+}
+
+.right-lower-card {
+  background-color: $Right-lower-card-color;
+  color: white;
+
+  .why-us {
+    margin: rem(35) rem(30) rem(20);
+  }
+
+  .table {
+    color: $Table-color;
+    list-style: none;
+    line-height: rem(20);
+    margin-left: rem(-5);
+  }
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (max-width: rem(767)) {
+  [class*="-card"] {
+    flex: 0 0 100%;
+  }
+
+  main {
+    height: 100%;
+  }
+
+  .card-container {
+    flex: 0 0 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: rem(6);
+  }
+
+  .upper-card {
+    border-top-left-radius: rem(5);
+    border-top-right-radius: rem(5);
+  }
+
+  .right-lower-card {
+    border-bottom-left-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+    padding-bottom: rem(5);
+  }
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: rem(768)) {
+  .card-container {
+    flex: 0 0 50%;
+    border-radius: rem(4);
+  }
+
+  .left-lower-card,
+  .right-lower-card {
+    flex: 0 0 50%;
+  }
+
+  .upper-card {
+    border-top-left-radius: rem(4);
+    border-top-right-radius: rem(4);
+  }
+
+  .left-lower-card {
+    border-bottom-left-radius: rem(4);
+  }
+
+  .right-lower-card {
+    border-bottom-right-radius: rem(4);
+  }
+}

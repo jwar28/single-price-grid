@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #e5eff5;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-size: 0.9375rem;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 1.0625rem;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.upper-card {
+  background-color: #ffffff;
+}
+
+.upper-card * {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
+.upper-card .header {
+  color: #2bb3b1;
+  margin-top: 2.1875rem;
+}
+
+.upper-card .second-header {
+  color: #c0df34;
+}
+
+.upper-card p {
+  color: #98a6bd;
+  margin: 0 1.875rem 2.1875rem 1.875rem;
+}
+
+.left-lower-card {
+  background-color: #2bb3b1;
+  color: white;
+}
+
+.left-lower-card * {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
+.left-lower-card .monthly-subscription {
+  margin: 2.1875rem 1.875rem 1.25rem;
+}
+
+.left-lower-card .price {
+  font-size: 1.875rem;
+  margin: 0 1.875rem 0;
+}
+
+.left-lower-card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-lower-card .price .grey-text {
+  font-size: 0.875rem;
+  color: #67c6c9;
+  margin-left: 0.9375rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.left-lower-card .button {
+  color: white;
+  font-family: "Karla", sans-serif;
+  outline: none;
+  border: none;
+  padding: 5%;
+  width: 80%;
+  border-radius: 0.25rem;
+  background-color: #bfdf32;
+  margin: 0.9375rem 1.875rem 2.1875rem;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.right-lower-card {
+  background-color: #4abebd;
+  color: white;
+}
+
+.right-lower-card .why-us {
+  margin: 2.1875rem 1.875rem 1.25rem;
+}
+
+.right-lower-card .table {
+  color: #baf6f7;
+  list-style: none;
+  line-height: 1.25rem;
+  margin-left: -0.3125rem;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (max-width: 47.9375rem) {
+  [class*="-card"] {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  main {
+    height: 100%;
+  }
+  .card-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 0.375rem;
+  }
+  .upper-card {
+    border-top-left-radius: 0.3125rem;
+    border-top-right-radius: 0.3125rem;
+  }
+  .right-lower-card {
+    border-bottom-left-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    padding-bottom: 0.3125rem;
+  }
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 48rem) {
+  .card-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    border-radius: 0.25rem;
+  }
+  .left-lower-card,
+  .right-lower-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .upper-card {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .left-lower-card {
+    border-bottom-left-radius: 0.25rem;
+  }
+  .right-lower-card {
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
